@@ -192,6 +192,7 @@ cc_library_shared {
 
     shared_libs: [
         "liblog",
+        "libutilscallstack",
         "libutils",
         "libEGL",
         "libGLESv1_CM",
@@ -216,6 +217,7 @@ cc_library_shared {
         "libclcore_debug_g.bc",
         "libclcore_g.bc",
         "libcompiler_rt",
+        "libcompiler_rt.vendor",
     ],
 
     arch: {
@@ -257,6 +259,8 @@ cc_library_shared {
         "libRS_internal",
         "libRSDriver",
         "libRSCacheDir",
+        "libRS_internal.vendor",
+        "libRSDriver.vendor",
     ],
 
     // Treble configuration
@@ -264,6 +268,7 @@ cc_library_shared {
         "libhidlbase",
         "libhidltransport",
         "libhwbinder",
+        "libutilscallstack",
         "libutils",
         "android.hardware.renderscript@1.0",
 
