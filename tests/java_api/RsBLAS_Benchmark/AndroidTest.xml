@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- Copyright (C) 2017 The Android Open Source Project
+<!-- Copyright (C) 2018 The Android Open Source Project
 
      Licensed under the Apache License, Version 2.0 (the "License");
      you may not use this file except in compliance with the License.
@@ -13,16 +13,15 @@
      See the License for the specific language governing permissions and
      limitations under the License.
 -->
-<configuration description="Run RSTest.">
-    <target_preparer class="com.android.tradefed.targetprep.TestAppInstallSetup">
-        <option name="test-file-name" value="RSTest.apk" />
+<configuration description="Runs RsBlasBenchmark metric instrumentation.">
+    <option name="test-suite-tag" value="apct" />
+    <option name="test-suite-tag" value="apct-metric-instrumentation" />
+    <target_preparer class="com.android.tradefed.targetprep.suite.SuiteApkInstaller">
+        <option name="cleanup-apks" value="true" />
+        <option name="test-file-name" value="RsBlasBenchmark.apk" />
     </target_preparer>
 
-    <option name="test-suite-tag" value="apct" />
-    <option name="test-tag" value="RSTest" />
     <test class="com.android.tradefed.testtype.AndroidJUnitTest" >
-        <option name="package" value="com.android.rs.test" />
-        <option name="runner" value="android.support.test.runner.AndroidJUnitRunner" />
-        <option name="hidden-api-checks" value="false"/>
+        <option name="package" value="com.example.android.rs.blasbenchmark" />
     </test>
 </configuration>
