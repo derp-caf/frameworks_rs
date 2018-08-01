@@ -26,7 +26,7 @@ LOCAL_SRC_FILES := \
     $(call all-java-files-under,../RSUnitTests/src) \
     $(call all-renderscript-files-under,../RSUnitTests/src) \
 
-LOCAL_RENDERSCRIPT_TARGET_API := 0
+LOCAL_RENDERSCRIPT_TARGET_API := current
 
 LOCAL_PACKAGE_NAME := RSTest
 LOCAL_SDK_VERSION := current

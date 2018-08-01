@@ -29,8 +29,9 @@ include $(CLEAR_VARS)
 LOCAL_MODULE_TAGS := tests
 LOCAL_STATIC_JAVA_LIBRARIES := android-support-test
 LOCAL_COMPATIBILITY_SUITE := device-tests
-LOCAL_RENDERSCRIPT_TARGET_API := 0
+LOCAL_RENDERSCRIPT_TARGET_API := current
 LOCAL_PACKAGE_NAME := RSTestForward_21_1_2
+LOCAL_SDK_VERSION := current
 my_rs_path := $(TOP)/prebuilts/renderscript/host/linux-x86/21.1.2
 LOCAL_RENDERSCRIPT_CC := $(my_rs_path)/bin/llvm-rs-cc
 LOCAL_RENDERSCRIPT_INCLUDES_OVERRIDE := $(my_rs_path)/include $(my_rs_path)/clang-include

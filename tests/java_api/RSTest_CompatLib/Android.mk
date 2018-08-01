@@ -31,11 +31,12 @@ LOCAL_STATIC_JAVA_LIBRARIES := \
     android-support-test \
     android-support-v8-renderscript \
 
-LOCAL_RENDERSCRIPT_TARGET_API := 0
+LOCAL_RENDERSCRIPT_TARGET_API := current
 LOCAL_RENDERSCRIPT_COMPATIBILITY := true
+LOCAL_SDK_VERSION := current
 LOCAL_MIN_SDK_VERSION := 8
 
-LOCAL_RENDERSCRIPT_FLAGS := -rs-package-name=android.support.v8.renderscript
+LOCAL_RENDERSCRIPT_FLAGS := -rs-package-name=androidx.renderscript
 
 include $(BUILD_PACKAGE)
 

@@ -19,8 +19,8 @@
 package com.android.rs.unittest;
 
 import android.content.Context;
-import android.support.v8.renderscript.RenderScript;
-import android.support.v8.renderscript.RenderScript.RSMessageHandler;
+import androidx.renderscript.RenderScript;
+import androidx.renderscript.RenderScript.RSMessageHandler;
 import android.support.test.InstrumentationRegistry;
 import android.util.Log;
 
