@@ -8,7 +8,7 @@ java_library_static {
     srcs: [
         "java/src/**/*.java",
     ],
-    static_libs: [
+    libs: [
         "android-support-annotations",
     ],
     product_variables: {
