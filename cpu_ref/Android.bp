@@ -6,7 +6,6 @@ cc_library_shared {
         enabled: true,
         support_system_process: true,
     },
-
     srcs: [
         "rsCpuCore.cpp",
         "rsCpuExecutable.cpp",
