@@ -198,6 +198,9 @@ cc_library_shared {
         "rsType.cpp",
     ],
 
+    // Allow implicit fallthrough in rsContext.cpp:414 until it is fixed.
+    cflags: ["-Wno-error=implicit-fallthrough"],
+
     generated_sources: ["rs_generated_sources"],
     generated_headers: ["rs_generated_headers"],
 
