@@ -273,7 +273,7 @@ static bool dumpBitcodeFile(const char *cacheDir, const char *resName,
         return false;
     }
 
-    FILE *fp = fopen(f.c_str(), "w");
+    FILE *fp = fopen(f.c_str(), "we");
     if (!fp) {
         ALOGE("Could not open %s", f.c_str());
         return false;
