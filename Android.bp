@@ -97,11 +97,7 @@ cc_binary_host {
     ],
 
     cflags: [
-        "-Wall",
-        "-Werror",
-        "-Wno-error=unneeded-internal-declaration",
-        "-Wno-error=unused-function",
-        "-Wno-error=unused-variable",
+        "-Wno-unused-function",
     ],
 
     stl: "none",
