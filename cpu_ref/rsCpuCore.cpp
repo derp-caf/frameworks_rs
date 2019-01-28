@@ -183,7 +183,7 @@ void RsdCpuReferenceImpl::unlockMutex() {
 // Determine if the CPU we're running on supports SIMD instructions.
 static void GetCpuInfo() {
     // Read the CPU flags from /proc/cpuinfo.
-    FILE *cpuinfo = fopen("/proc/cpuinfo", "r");
+    FILE *cpuinfo = fopen("/proc/cpuinfo", "re");
 
     if (!cpuinfo) {
         return;

@@ -97,11 +97,7 @@ cc_binary_host {
     ],
 
     cflags: [
-        "-Wall",
-        "-Werror",
-        "-Wno-error=unneeded-internal-declaration",
-        "-Wno-error=unused-function",
-        "-Wno-error=unused-variable",
+        "-Wno-unused-function",
     ],
 
     stl: "none",
@@ -197,9 +193,6 @@ cc_library_shared {
         "rsThreadIO.cpp",
         "rsType.cpp",
     ],
-
-    // Allow implicit fallthrough in rsContext.cpp:414 until it is fixed.
-    cflags: ["-Wno-error=implicit-fallthrough"],
 
     generated_sources: ["rs_generated_sources"],
     generated_headers: ["rs_generated_headers"],
