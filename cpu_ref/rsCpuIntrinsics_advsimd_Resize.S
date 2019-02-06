@@ -166,7 +166,8 @@ ENTRY(rsdIntrinsicResizeB\comp\()_K)
             bic         x12, x12, #(1 << (CHUNKSHIFT + 1 + COMPONENT_SHIFT + 1)) - 1
 
             ldr         x8, [sp,#104]           // yr
-            adr         x9, 8f
+            adrp        x9, intrinsic_resize_consts
+            add         x9, x9, :lo12:intrinsic_resize_consts
             ld1         {v4.4s}, [x8]
             ld1         {v5.8h}, [x9]
             sqxtun      v4.4h, v4.4s            // yr
@@ -271,8 +272,6 @@ ENTRY(rsdIntrinsicResizeB\comp\()_K)
             bge         2f                      /* if at least CHUNKSIZE are available... */
             add         x11, x11, #CHUNKSIZE    /* if they're not... */
             b           4f
-            /* ..just sneaking a literal in here after this unconditional branch.. */
-8:          .hword      0, 1, 2, 3, 4, 5, 6, 7
             /* basic fill loop, processing 8 bytes at a time until there are
              * fewer than eight bytes available.
              */
@@ -751,3 +750,5 @@ ENTRY(rsdIntrinsicResizeB\comp\()_K)
 END(rsdIntrinsicResizeB\comp\()_K)
 .endr
 
+.rodata
+intrinsic_resize_consts:          .hword      0, 1, 2, 3, 4, 5, 6, 7
