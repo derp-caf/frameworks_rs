@@ -24,7 +24,7 @@ LOCAL_PACKAGE_NAME := RSTest_Compat19
 LOCAL_MODULE_TAGS := tests
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
-    android-support-test \
+    androidx.test.rules \
     android-support-v8-renderscript \
 
 LOCAL_RENDERSCRIPT_TARGET_API := 19
