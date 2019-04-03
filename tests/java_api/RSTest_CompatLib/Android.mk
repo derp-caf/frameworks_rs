@@ -28,7 +28,7 @@ LOCAL_SRC_FILES := \
     $(call all-renderscript-files-under,../RSUnitTests/supportlibsrc_gen) \
 
 LOCAL_STATIC_JAVA_LIBRARIES := \
-    android-support-test \
+    androidx.test.rules \
     android-support-v8-renderscript \
 
 LOCAL_RENDERSCRIPT_TARGET_API := current

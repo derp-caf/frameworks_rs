@@ -496,7 +496,7 @@ def WriteForwardAndroidManifest(gen_file, package):
       '    </application>\n'
       '\n'
       '    <instrumentation\n'
-      '        android:name="android.support.test.runner.AndroidJUnitRunner"\n'
+      '        android:name="androidx.test.runner.AndroidJUnitRunner"\n'
       '        android:targetPackage="{}"\n'
       '        android:label="RenderScript Forward Compatibility Tests" />\n'
       '</manifest>\n'.format(package, package)

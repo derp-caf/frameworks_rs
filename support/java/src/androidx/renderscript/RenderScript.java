@@ -1391,8 +1391,10 @@ public class RenderScript {
                     Class<?> vm_runtime = Class.forName("dalvik.system.VMRuntime");
                     Method get_runtime = vm_runtime.getDeclaredMethod("getRuntime");
                     sRuntime = get_runtime.invoke(null);
-                    registerNativeAllocation = vm_runtime.getDeclaredMethod("registerNativeAllocation", Integer.TYPE);
-                    registerNativeFree = vm_runtime.getDeclaredMethod("registerNativeFree", Integer.TYPE);
+                    Class<?> argClass = android.os.Build.VERSION.SDK_INT >= 29 ? Long.TYPE : Integer.TYPE;
+                    // The int version is (so far) always defined, but deprecated for APIs >= 29.
+                    registerNativeAllocation = vm_runtime.getDeclaredMethod("registerNativeAllocation", argClass);
+                    registerNativeFree = vm_runtime.getDeclaredMethod("registerNativeFree", argClass);
                     sUseGCHooks = true;
                 } catch (Exception e) {
                     Log.e(LOG_TAG, "No GC methods");
