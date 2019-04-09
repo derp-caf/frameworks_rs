@@ -22,6 +22,6 @@
     <option name="test-tag" value="RsMinimalTest" />
     <test class="com.android.tradefed.testtype.AndroidJUnitTest" >
         <option name="package" value="com.android.rs.minimaltest" />
-        <option name="runner" value="android.support.test.runner.AndroidJUnitRunner" />
+        <option name="runner" value="androidx.test.runner.AndroidJUnitRunner" />
     </test>
 </configuration>

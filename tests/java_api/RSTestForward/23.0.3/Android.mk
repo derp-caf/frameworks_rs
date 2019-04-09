@@ -27,7 +27,7 @@ my_rs_unit_tests_path := ../../RSUnitTests/src/com/android/rs/unittest
 include $(CLEAR_VARS)
 
 LOCAL_MODULE_TAGS := tests
-LOCAL_STATIC_JAVA_LIBRARIES := android-support-test
+LOCAL_STATIC_JAVA_LIBRARIES := androidx.test.rules
 LOCAL_COMPATIBILITY_SUITE := device-tests
 LOCAL_RENDERSCRIPT_TARGET_API := current
 LOCAL_PACKAGE_NAME := RSTestForward_23_0_3
